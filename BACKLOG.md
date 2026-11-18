@@ -13,6 +13,7 @@ Derivado de `ESCOPO.md`. Ordem sugerida para a primeira versão web: segurança 
 | F-05 | Acompanhamento: entender frequência, quantidade, histórico e evolução mensal | 3 Registro diário; 5; 7.4 e 7.12 | P0 |
 | F-06 | Experiência e temas: usar bem no celular e escolher aparência | 3 Interface; 6 Qualidade | P0 para uso móvel; P1 para temas |
 | F-07 | Compartilhamento: gerar imagem do progresso com controle do usuário | 3 Compartilhamento; 5 | P1 |
+| F-08 | Ambiente local: executar e testar a aplicação completa com Docker Compose | 6 Plataforma técnica | P0 técnico |
 
 ## Histórias
 
@@ -212,6 +213,16 @@ Derivado de `ESCOPO.md`. Ordem sugerida para a primeira versão web: segurança 
   5. Dado um lançamento corrigido ou excluído em um dos períodos, quando volto ao dashboard, então o indicador e os totais refletem a alteração.
   6. Dado outro usuário, quando tento obter os indicadores de seus hábitos, então não recebo seus totais.
 - Observação: UI/UX deve mostrar texto e números, sem depender só de cor. O backend deve agregar os hábitos do período sem carregar todo o histórico nem criar consultas por hábito.
+
+### H-22 — Executar a aplicação localmente com Docker
+
+- Feature: F-08; origem: seção 6 Plataforma técnica; prioridade: P0 técnico; dependências: código do backend e frontend para a execução completa.
+- História: Como desenvolvedor, quero iniciar a aplicação e suas dependências com Docker Compose para validar os fluxos sem provisionar AWS.
+- Critérios de aceite:
+  1. PostgreSQL e capturador de e-mails iniciam localmente com portas limitadas ao próprio computador e sem credenciais versionadas.
+  2. Quando os módulos existirem, API Java 17 e frontend Angular iniciam pelo Compose, com banco, e-mail e URLs corretos.
+  3. Uma verificação reproduzível demonstra o fluxo de acesso por link na aplicação local; a interface do capturador mostra a mensagem sem entrega externa.
+  4. Os comandos de inicialização, parada, limpeza de dados e limitações estão documentados; nenhuma etapa exige conta AWS.
 
 ## Critérios transversais de conclusão
 

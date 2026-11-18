@@ -91,7 +91,7 @@ Criar uma plataforma pessoal para planejar hábitos e registrar o que foi realiz
 ### Plataforma técnica
 
 - O backend deve usar **Java 17**. Frameworks e ferramentas padrão ficam em `PADROES_TECNICOS.md`; o projeto deve compilar e executar com Java 17.
-- Para esta POC, desenvolver localmente e usar a estratégia de menor custo documentada em `ARQUITETURA_AWS_POC.md` quando uma demonstração AWS for necessária. A escolha final de tamanho depende de medição de performance.
+- A primeira forma de execução da aplicação será local, com Docker Compose para frontend Angular, API Java 17, PostgreSQL e capturador de e-mails. O ambiente deve permitir testar o fluxo de link de acesso sem envio real de mensagens. Planejamento e provisionamento AWS ficam para uma etapa posterior, após o fluxo local completo funcionar e ser medido.
 
 ## 7. Critérios de aceite da primeira versão
 

@@ -20,4 +20,4 @@ Nenhuma credencial real deve ser gravada neste repositório, incluindo código, 
 
 ## Limite do controle
 
-O scanner local detecta formatos conhecidos e atribuições suspeitas; não prova ausência absoluta de segredos. Revisão humana e controle de acesso às fontes de segredo continuam necessários. Este projeto ainda não possui repositório Git nem pipeline de CI.
+O scanner local detecta formatos conhecidos e atribuições suspeitas; não prova ausência absoluta de segredos. Revisão humana e controle de acesso às fontes de segredo continuam necessários. O repositório Git já existe, mas ainda não há pipeline de CI.

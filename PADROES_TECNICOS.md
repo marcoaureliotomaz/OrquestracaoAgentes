@@ -11,7 +11,7 @@ Estas são as escolhas padrão **para a aplicação nova** definida em `ESCOPO.m
 | Persistência | PostgreSQL, Spring Data JPA e Flyway | O tracker exige histórico persistente por usuário. Usar migrações versionadas e revisar consultas do calendário. |
 | Frontend | Angular 22, TypeScript, Angular Router e HttpClient | Interface web quando prevista no escopo. Usar componentes standalone e recursos reativos nativos; conferir a matriz Node/TypeScript do Angular. |
 | UI | HTML semântico, CSS e componentes Angular | Biblioteca visual somente se acelerar o produto sem comprometer acessibilidade, identidade ou peso da aplicação. |
-| Infraestrutura | AWS CDK v2 em TypeScript; estratégia em `ARQUITETURA_AWS_POC.md` | Desenvolvimento local por padrão; para demonstração pública, avaliar uma instância Lightsail de 2 GB antes de criar serviços adicionais. |
+| Infraestrutura | Docker Compose local primeiro; estratégia AWS futura em `ARQUITETURA_AWS_POC.md` | Executar API, frontend, PostgreSQL e capturador de e-mails localmente antes de planejar hospedagem AWS. |
 | Testes | JUnit Jupiter, Spring Boot Test, Testcontainers com PostgreSQL e JaCoCo; Angular com Vitest e cobertura; Playwright para jornadas web | Seguir os portões de `QUALIDADE_TESTES.md`; testar integração real com banco, contratos e autorização. |
 
 ## Metodologia de trabalho

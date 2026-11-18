@@ -1,6 +1,6 @@
 # Estratégia AWS de baixo custo para a POC
 
-Esta estratégia preserva Java 17, Spring Boot, Angular e PostgreSQL. Seu objetivo é demonstrar a aplicação com custo pequeno e previsível, sem introduzir vários serviços gerenciados antes de existir carga real. Preços e elegibilidade ao Free Tier devem ser conferidos na conta e na Região escolhida antes de qualquer criação de recurso. **Nenhum recurso AWS foi criado.**
+Esta estratégia fica **adiada** até a aplicação completa funcionar localmente com Docker Compose. Ela preserva Java 17, Spring Boot, Angular e PostgreSQL para uma eventual demonstração pública com custo pequeno e previsível. Preços e elegibilidade ao Free Tier devem ser conferidos na conta e na Região escolhida antes de qualquer criação de recurso. **Nenhum recurso AWS foi criado.**
 
 ## Modos de uso
 
