@@ -1,6 +1,6 @@
 # Tarefas de implementação
 
-As histórias de `BACKLOG.md` descrevem valor para o usuário. Este arquivo descreve **mudanças pequenas de implementação**, refinadas apenas para a próxima história a executar. Tarefas de histórias posteriores são detalhadas quando seus contratos e decisões estiverem disponíveis, para evitar suposições técnicas.
+As histórias de `BACKLOG.md` descrevem valor para o usuário. Este arquivo é o **índice** das mudanças pequenas de implementação. O resultado, a verificação e o estado de cada tarefa ficam somente em `features/F-xx/tarefas/T-xxx.md`. Tarefas de histórias posteriores são detalhadas quando seus contratos e decisões estiverem disponíveis, para evitar suposições técnicas.
 
 ## Regra para uma tarefa estar pronta
 
@@ -16,26 +16,7 @@ Não preencha lacunas de requisito ou de contrato por suposição. Marque `bloqu
 
 ## Próxima história: H-01 — acesso por link de e-mail
 
-As tarefas abaixo são um primeiro refinamento. O arquiteto deve fechar o contrato e a estratégia de sessão em T-001 antes de marcar as dependentes como prontas. Nenhuma tarefa implica credenciais reais ou envio de e-mail de produção.
-
-| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
-| --- | --- | --- | --- | --- | --- | --- |
-| T-001 | F-01 | Definir contrato de solicitação e consumo do link, estados de erro e sessão | Arquitetura | H-01 | Contrato documentado e revisado quanto a enumeração, expiração e uso único | pronta |
-| T-002 | F-01 | Criar estrutura mínima do backend Java 17 e build Maven | Java | T-001 | `mvn verify` executa com Java 17 e teste inicial útil | a fazer |
-| T-003 | F-01 | Criar migração da conta e teste da migração | Java | T-002 | PostgreSQL Testcontainers aplica a migração sem erro | a fazer |
-| T-004 | F-01 | Criar migração para hash e validade de links de acesso | Java | T-003 | Teste integrado confirma estrutura e restrições esperadas | a fazer |
-| T-005 | F-01 | Implementar emissão de token de uso único, guardando só seu hash | Java | T-004 | Testes verificam validade, aleatoriedade e ausência de token puro no banco | a fazer |
-| T-006 | F-01 | Implementar consumo atômico e expiração do link | Java | T-005 | Testes impedem reutilização e consumo de link expirado | a fazer |
-| T-007 | F-01 | Implementar adaptador de envio de e-mail com configuração externa | Java | T-005 | Teste captura mensagem sem serviço real nem segredo no projeto | a fazer |
-| T-008 | F-01 | Expor solicitação do link com resposta neutra | Java | T-001, T-007 | Teste HTTP confirma mesma resposta pública para conta existente ou nova | a fazer |
-| T-009 | F-01 | Limitar abuso de solicitações de link | Java | T-008 | Teste demonstra bloqueio de excesso sem revelar existência da conta | a fazer |
-| T-010 | F-01 | Expor consumo do link e abertura de sessão | Java | T-001, T-006 | Teste HTTP integrado confirma sessão válida e recusa de replay | a fazer |
-| T-011 | F-01 | Criar tela móvel para solicitar link e mostrar feedback | Angular | T-001, T-008 e critérios de UI/UX | Teste de componente verifica entrada, carregamento, sucesso e erro | a fazer |
-| T-012 | F-01 | Criar fluxo de retorno do link no frontend | Angular | T-001, T-010 e critérios de UI/UX | Teste de componente verifica sucesso, expiração e falha | a fazer |
-| T-013 | F-01 | Testar integração do fluxo de link com banco e e-mail capturado | Java | T-008, T-010 | Teste integrado passa com PostgreSQL e sem serviço de e-mail real | a fazer |
-| T-014 | F-01 | Revisar os casos de abuso e isolamento do login | Segurança | T-009, T-010, T-013 | Testes comprovam expiração, replay, resposta neutra e limites de solicitação | a fazer |
-| T-015 | F-01 | Verificar login em viewport móvel | QA | T-011, T-012 | Jornada Playwright passa em ambiente de teste | a fazer |
-| T-016 | F-01 | Conferir os portões de entrega da história | QA | T-013, T-014, T-015 | Cobertura, testes, scanner de segredos e pendências registrados | a fazer |
+As tarefas [T-001](features/F-01/tarefas/T-001.md) a [T-016](features/F-01/tarefas/T-016.md) são um primeiro refinamento. O arquiteto deve fechar o contrato e a estratégia de sessão em T-001 antes de marcar as dependentes como prontas. Nenhuma tarefa implica credenciais reais ou envio de e-mail de produção.
 
 ## Próximo refinamento
 
@@ -66,9 +47,14 @@ Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas 
 | T-025 | F-10 | Definir o portão de cobertura, integração e aceite para cada feature | QA | H-24 | Políticas e papéis exigem evidência por feature antes da conclusão | concluída |
 | T-026 | F-10 | Criar modelo curto de relatório de validação da feature | QA | T-025 | Modelo permite registrar comandos, métricas, critérios e decisão | concluída |
 
+## Links dos arquivos de tarefas
+
+- F-01: [T-001](features/F-01/tarefas/T-001.md), [T-002](features/F-01/tarefas/T-002.md), [T-003](features/F-01/tarefas/T-003.md), [T-004](features/F-01/tarefas/T-004.md), [T-005](features/F-01/tarefas/T-005.md), [T-006](features/F-01/tarefas/T-006.md), [T-007](features/F-01/tarefas/T-007.md), [T-008](features/F-01/tarefas/T-008.md), [T-009](features/F-01/tarefas/T-009.md), [T-010](features/F-01/tarefas/T-010.md), [T-011](features/F-01/tarefas/T-011.md), [T-012](features/F-01/tarefas/T-012.md), [T-013](features/F-01/tarefas/T-013.md), [T-014](features/F-01/tarefas/T-014.md), [T-015](features/F-01/tarefas/T-015.md), [T-016](features/F-01/tarefas/T-016.md).
+- F-08: [T-017](features/F-08/tarefas/T-017.md), [T-018](features/F-08/tarefas/T-018.md), [T-019](features/F-08/tarefas/T-019.md), [T-020](features/F-08/tarefas/T-020.md), [T-021](features/F-08/tarefas/T-021.md).
+- F-09: [T-022](features/F-09/tarefas/T-022.md), [T-023](features/F-09/tarefas/T-023.md), [T-024](features/F-09/tarefas/T-024.md).
+- F-11: [T-027](features/F-11/tarefas/T-027.md), [T-028](features/F-11/tarefas/T-028.md), [T-029](features/F-11/tarefas/T-029.md), [T-030](features/F-11/tarefas/T-030.md), [T-031](features/F-11/tarefas/T-031.md).
+
 ## Feature técnica F-12 — início seguro de feature
 
-| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
-| --- | --- | --- | --- | --- | --- | --- |
-| T-032 | F-12 | Definir a sequência obrigatória de sincronização e criação da branch | Arquitetura | H-26 | Fluxo impede implementação sobre main desatualizada ou com arquivos pendentes | concluída |
-| T-033 | F-12 | Criar comando que prepara main e abre branch nova com validações | Infraestrutura local | T-032 | Testes em repositório isolado confirmam sucesso e rejeição de estados inseguros | concluída |
+- [T-032](features/F-12/tarefas/T-032.md) — Definir a sequência obrigatória de sincronização e criação da branch.
+- [T-033](features/F-12/tarefas/T-033.md) — Criar comando que prepara main e abre branch nova com validações.

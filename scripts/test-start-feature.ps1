@@ -37,7 +37,7 @@ try {
     Invoke-TestGit -Arguments @('init', '--bare', $remote) | Out-Null
     Invoke-TestGit -Arguments @('init', '-b', 'main', $seed) | Out-Null
     Set-Content -LiteralPath (Join-Path $seed 'BACKLOG.md') -Encoding UTF8 -Value @(
-        '| F-01 | Acesso | Produto | P0 |',
+        '| [F-01](features/F-01/FEATURE.md) | Acesso | P0 |',
         '| F-02 | Habitos | Produto | P0 |'
     )
     Invoke-TestGit -Arguments @('-C', $seed, 'add', 'BACKLOG.md') | Out-Null

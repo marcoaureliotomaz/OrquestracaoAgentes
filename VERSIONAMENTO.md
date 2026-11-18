@@ -8,7 +8,7 @@
 - Nos prompts seguintes da mesma feature, continue na branch existente; não abra outra branch para cada tarefa. Verifique se ela incorpora as mudanças relevantes de `main` antes de continuar.
 - Para iniciar uma feature já cadastrada em `BACKLOG.md`, execute `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-feature.ps1 -FeatureId F-01 -Slug acesso-conta` a partir da raiz do projeto, trocando ID e descrição. O comando recusa alterações locais, branch existente e `main` divergente. Execute-o uma vez por feature.
 - Uma branch de feature contém apenas histórias e tarefas dessa feature. Não misture trabalho de duas features na mesma branch. Se uma mudança compartilhada for necessária, registre-a como tarefa pequena e indique a feature que a introduz; mudanças independentes exigem uma feature técnica própria no backlog.
-- Não inicie uma tarefa se a branch atual não corresponder à feature indicada em `TAREFAS.md`.
+- Não inicie uma tarefa se a branch atual não corresponder à feature indicada no arquivo `features/F-xx/tarefas/T-xxx.md`.
 
 ## Regra de commit
 
@@ -22,6 +22,6 @@
 
 ## Rastreabilidade
 
-`ESCOPO.md` → `BACKLOG.md` (`F-xx` e `H-xx`) → `TAREFAS.md` (`T-xxx` e `F-xx`) → branch `feature/F-xx-*` → commit com `F-xx T-xxx` no assunto. O hash é obtido pelo histórico Git; não precisa ser escrito no próprio arquivo de tarefas.
+`ESCOPO.md` → `BACKLOG.md` (índice) → `features/F-xx/FEATURE.md` → `features/F-xx/historias/H-xx.md` → `features/F-xx/tarefas/T-xxx.md` → `features/F-xx/PROGRESSO.md` (rodadas) → branch `feature/F-xx-*` → commit com `F-xx T-xxx` no assunto. `TAREFAS.md` é o índice das tarefas. O hash é obtido pelo histórico Git; não precisa ser escrito no arquivo da tarefa.
 
-O hook `.githooks/commit-msg` valida o nome da branch, a mensagem e a relação tarefa–feature. Ele também executa a verificação de segredos. Configure o repositório local com `git config core.hooksPath .githooks`; a CI deverá repetir as verificações quando existir.
+O hook `.githooks/commit-msg` valida o nome da branch, a mensagem, a relação tarefa–feature, os vínculos do backlog e a verificação de segredos. Configure o repositório local com `git config core.hooksPath .githooks`; a CI deverá repetir as verificações quando existir.

@@ -12,7 +12,7 @@ A verificação de segredos definida em `SEGREDOS.md` também é portão de entr
 4. Exclusões de cobertura limitam-se a código gerado, arquivos de bootstrap e configuração sem lógica. Cada exclusão deve ter justificativa registrada e ser revisada pelo QA; não excluir código difícil de testar para alcançar 95%. Não criar testes que apenas executem código sem verificar resultado.
 5. Toda correção de defeito reproduzível inclui teste de regressão na camada mais barata que detecta a falha. Uma alteração em contrato, persistência ou autorização exige integração correspondente.
 6. Se um portão não puder rodar por dependência externa ou falha do ambiente, a entrega informa o comando, o erro e o risco; não declare aprovação completa.
-7. Antes de concluir uma história, conferir `TAREFAS.md` e `DIVIDA_TECNICA.md`: todas as tarefas necessárias devem estar concluídas, achados devem ter destino explícito e nenhum item P0 pode permanecer aberto.
+7. Antes de concluir uma história, conferir os arquivos de tarefa ligados em `TAREFAS.md` e `DIVIDA_TECNICA.md`: todas as tarefas necessárias devem estar concluídas, achados devem ter destino explícito e nenhum item P0 pode permanecer aberto.
 
 ## Portão de conclusão por feature
 

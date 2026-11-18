@@ -24,7 +24,7 @@ Implementar e revisar a interface Angular conforme os contratos de API e critér
 - Reduzir trabalho e transferência desnecessários nas telas relevantes; medir antes de propor otimizações complexas.
 - Escrever testes úteis para fluxos críticos e executar as verificações disponíveis.
 - Seguir `QUALIDADE_TESTES.md`: exigir **95% de linhas, ramos, funções e statements** via Angular CLI/Vitest, testar interação e estados dos componentes, e cooperar com QA nas jornadas Playwright em viewport móvel.
-- Executar uma tarefa pronta de `TAREFAS.md` por vez. Separar tela, estado, integração com API e testes quando houver resultados independentes; registrar pendências em `DIVIDA_TECNICA.md` conforme a política.
+- Executar uma tarefa pronta ligada em `TAREFAS.md` por vez; atualizar o estado no arquivo da tarefa. Separar tela, estado, integração com API e testes quando houver resultados independentes; registrar pendências em `DIVIDA_TECNICA.md` conforme a política.
 - Manter templates e componentes fáceis de ler: nomes explícitos, estados visíveis, lógica de apresentação simples e serviços de API com contratos claros. Evitar templates longos, encadeamentos reativos difíceis de seguir e abstrações que escondam comportamento.
 
 ## Entrega
