@@ -14,6 +14,7 @@ Derivado de `ESCOPO.md`. Ordem sugerida para a primeira versão web: segurança 
 | F-06 | Experiência e temas: usar bem no celular e escolher aparência | 3 Interface; 6 Qualidade | P0 para uso móvel; P1 para temas |
 | F-07 | Compartilhamento: gerar imagem do progresso com controle do usuário | 3 Compartilhamento; 5 | P1 |
 | F-08 | Ambiente local: executar e testar a aplicação completa com Docker Compose | 6 Plataforma técnica | P0 técnico |
+| F-09 | Apresentação do projeto: explicar a POC, a orquestração de agentes e o estado da implementação | Documentação do repositório | P0 técnico |
 
 ## Histórias
 
@@ -223,6 +224,16 @@ Derivado de `ESCOPO.md`. Ordem sugerida para a primeira versão web: segurança 
   2. Quando os módulos existirem, API Java 17 e frontend Angular iniciam pelo Compose, com banco, e-mail e URLs corretos.
   3. Uma verificação reproduzível demonstra o fluxo de acesso por link na aplicação local; a interface do capturador mostra a mensagem sem entrega externa.
   4. Os comandos de inicialização, parada, limpeza de dados e limitações estão documentados; nenhuma etapa exige conta AWS.
+
+### H-23 — Apresentar a POC no README
+
+- Feature: F-09; origem: documentação do repositório; prioridade: P0 técnico; dependências: escopo e padrões técnicos definidos.
+- História: Como pessoa que acessa o repositório, quero entender o experimento de orquestração, o produto, a stack e o estado atual antes de navegar pelos arquivos.
+- Critérios de aceite:
+  1. O README apresenta primeiro o objetivo da orquestração de agentes e as técnicas de IA realmente usadas ou planejadas.
+  2. O escopo do tracker, a stack e os controles de segurança, testes e versionamento aparecem com links para os documentos fonte.
+  3. Ícones e imagens locais ajudam a leitura; as imagens têm texto alternativo e não dependem de serviço externo.
+  4. O texto distingue planejamento e artefatos existentes da aplicação ainda não implementada.
 
 ## Critérios transversais de conclusão
 

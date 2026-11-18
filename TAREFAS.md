@@ -50,3 +50,10 @@ Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas 
 | T-019 | F-08 | Criar imagem da API Java 17 e adicioná-la ao Compose | Java | T-002, T-018 | API inicia pelo Compose e conecta ao PostgreSQL e SMTP local | bloqueada |
 | T-020 | F-08 | Criar imagem do frontend Angular e adicioná-la ao Compose | Angular | frontend criado, T-019 | Interface acessível localmente e chamadas à API funcionam | bloqueada |
 | T-021 | F-08 | Verificar jornada local de login por link | QA | T-019, T-020 e H-01 implementada | Jornada reproduzível passa sem AWS nem envio externo de e-mail | bloqueada |
+
+## Feature técnica F-09 — apresentação do repositório
+
+| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
+| --- | --- | --- | --- | --- | --- | --- |
+| T-022 | F-09 | Escrever README sobre orquestração, escopo, stack e estado real do projeto | Documentação | H-23 | Texto confere com escopo e padrões; links locais existentes | concluída |
+| T-023 | F-09 | Criar imagens SVG locais e integrá-las ao README | UI/UX | T-022 | SVGs válidos, legíveis e com texto alternativo no Markdown | pronta |
