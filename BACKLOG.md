@@ -13,6 +13,7 @@ Derivado de `ESCOPO.md`. Ordem sugerida para a primeira versão web: segurança 
 | F-05 | Acompanhamento: entender frequência, quantidade, histórico e evolução mensal | 3 Registro diário; 5; 7.4 e 7.12 | P0 |
 | F-06 | Experiência e temas: usar bem no celular e escolher aparência | 3 Interface; 6 Qualidade | P0 para uso móvel; P1 para temas |
 | F-07 | Compartilhamento: gerar imagem do progresso com controle do usuário | 3 Compartilhamento; 5 | P1 |
+| F-09 | Apresentação do projeto: explicar a POC, a orquestração de agentes e o estado da implementação | Documentação do repositório | P0 técnico |
 
 ## Histórias
 
@@ -212,6 +213,16 @@ Derivado de `ESCOPO.md`. Ordem sugerida para a primeira versão web: segurança 
   5. Dado um lançamento corrigido ou excluído em um dos períodos, quando volto ao dashboard, então o indicador e os totais refletem a alteração.
   6. Dado outro usuário, quando tento obter os indicadores de seus hábitos, então não recebo seus totais.
 - Observação: UI/UX deve mostrar texto e números, sem depender só de cor. O backend deve agregar os hábitos do período sem carregar todo o histórico nem criar consultas por hábito.
+
+### H-23 — Apresentar a POC no README
+
+- Feature: F-09; origem: documentação do repositório; prioridade: P0 técnico; dependências: escopo e padrões técnicos definidos.
+- História: Como pessoa que acessa o repositório, quero entender o experimento de orquestração, o produto, a stack e o estado atual antes de navegar pelos arquivos.
+- Critérios de aceite:
+  1. O README apresenta primeiro o objetivo da orquestração de agentes e as técnicas de IA realmente usadas ou planejadas.
+  2. O escopo do tracker, a stack e os controles de segurança, testes e versionamento aparecem com links para os documentos fonte.
+  3. Ícones e imagens locais ajudam a leitura; as imagens têm texto alternativo e não dependem de serviço externo.
+  4. O texto distingue planejamento e artefatos existentes da aplicação ainda não implementada.
 
 ## Critérios transversais de conclusão
 
