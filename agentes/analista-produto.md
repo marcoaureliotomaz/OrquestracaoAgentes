@@ -22,4 +22,4 @@ Ajudar a definir o escopo do sistema a partir da descrição do usuário e decom
 
 ## Entrega
 
-Atualize `BACKLOG.md` com features e histórias rastreáveis até `ESCOPO.md`. Liste perguntas que realmente bloqueiam o refinamento e hipóteses usadas nas demais histórias. Não implemente código.
+Crie ou atualize `features/F-xx/FEATURE.md` e `features/F-xx/historias/H-xx.md`, mantendo `BACKLOG.md` como índice de links. Cada história deve continuar rastreável até `ESCOPO.md`. Liste perguntas que realmente bloqueiam o refinamento e hipóteses usadas nas demais histórias. Não implemente código.

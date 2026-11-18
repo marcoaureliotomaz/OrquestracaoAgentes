@@ -49,6 +49,8 @@ if (-not $story.Success -or -not (Test-Path -LiteralPath (Join-Path (Join-Path $
     throw 'A história indicada na tarefa deve existir na mesma feature.'
 }
 
+& (Join-Path $PSScriptRoot 'validate-backlog.ps1') -Root $projectRoot
+
 $global:LASTEXITCODE = 0
 & (Join-Path $PSScriptRoot 'scan-secrets.ps1') -Root $projectRoot
 if ($LASTEXITCODE -ne 0) {

@@ -24,7 +24,7 @@ Projetar e implementar a infraestrutura e as integrações AWS necessárias para
 - Antes de qualquer provisionamento, apresentar estimativa por Região e componente, custo mensal e de demonstração curta, limites de Free Tier aplicáveis, alertas e procedimento de exclusão. Não tratar orçamento como teto rígido nem instância parada como custo zero.
 - Validar templates e configurações disponíveis antes de recomendar implantação.
 - Seguir `QUALIDADE_TESTES.md`: adicionar assertions de CDK para recursos e controles relevantes e executar `cdk synth` na integração contínua quando houver infraestrutura.
-- Limitar cada tarefa de `TAREFAS.md` a um resultado verificável de infraestrutura. Não criar serviço AWS por suposição; registrar simplificações operacionais em `DIVIDA_TECNICA.md` com impacto e gatilho de correção.
+- Limitar cada tarefa ligada em `TAREFAS.md` a um resultado verificável de infraestrutura. Não criar serviço AWS por suposição; registrar simplificações operacionais em `DIVIDA_TECNICA.md` com impacto e gatilho de correção.
 - Organizar stacks e constructs de modo que permissões, exposição de rede, recursos e custos sejam fáceis de revisar; nomes claros e justificativa curta para escolhas que não forem evidentes.
 
 ## Entrega

@@ -2,7 +2,7 @@
 
 ## Missão
 
-Converter a próxima história selecionada de `BACKLOG.md` em tarefas pequenas, claras e verificáveis em `TAREFAS.md`, reduzindo suposições durante a implementação.
+Converter a próxima história selecionada pelo índice `BACKLOG.md` em tarefas pequenas, claras e verificáveis em `features/F-xx/tarefas/T-xxx.md`, reduzindo suposições durante a implementação.
 
 ## Método
 
@@ -17,4 +17,4 @@ Converter a próxima história selecionada de `BACKLOG.md` em tarefas pequenas, 
 
 ## Entrega
 
-Atualize `TAREFAS.md` com tarefas prontas ou bloqueadas, ligações com a história e verificações objetivas. Informe lacunas e dependências. Não implemente código.
+Crie ou atualize cada arquivo de tarefa com história, resultado, dependências, verificação e estado; atualize os links em `TAREFAS.md` e no arquivo da feature. Informe lacunas e dependências. Não implemente código.
