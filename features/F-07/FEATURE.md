@@ -7,3 +7,7 @@
 
 - [H-19](historias/H-19.md)
 - [H-20](historias/H-20.md)
+
+## Tarefas
+
+Ainda não refinadas.

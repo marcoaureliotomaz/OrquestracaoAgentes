@@ -1,6 +1,6 @@
 # Tarefas de implementação
 
-As histórias de `BACKLOG.md` descrevem valor para o usuário. Este arquivo descreve **mudanças pequenas de implementação**, refinadas apenas para a próxima história a executar. Tarefas de histórias posteriores são detalhadas quando seus contratos e decisões estiverem disponíveis, para evitar suposições técnicas.
+As histórias de `BACKLOG.md` descrevem valor para o usuário. Este arquivo é o **índice** das mudanças pequenas de implementação. O resultado, a verificação e o estado de cada tarefa ficam somente em `features/F-xx/tarefas/T-xxx.md`. Tarefas de histórias posteriores são detalhadas quando seus contratos e decisões estiverem disponíveis, para evitar suposições técnicas.
 
 ## Regra para uma tarefa estar pronta
 
@@ -16,53 +16,40 @@ Não preencha lacunas de requisito ou de contrato por suposição. Marque `bloqu
 
 ## Próxima história: H-01 — acesso por link de e-mail
 
-As tarefas abaixo são um primeiro refinamento. O arquiteto deve fechar o contrato e a estratégia de sessão em T-001 antes de marcar as dependentes como prontas. Nenhuma tarefa implica credenciais reais ou envio de e-mail de produção.
-
-| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
-| --- | --- | --- | --- | --- | --- | --- |
-| T-001 | F-01 | Definir contrato de solicitação e consumo do link, estados de erro e sessão | Arquitetura | H-01 | Contrato documentado e revisado quanto a enumeração, expiração e uso único | pronta |
-| T-002 | F-01 | Criar estrutura mínima do backend Java 17 e build Maven | Java | T-001 | `mvn verify` executa com Java 17 e teste inicial útil | a fazer |
-| T-003 | F-01 | Criar migração da conta e teste da migração | Java | T-002 | PostgreSQL Testcontainers aplica a migração sem erro | a fazer |
-| T-004 | F-01 | Criar migração para hash e validade de links de acesso | Java | T-003 | Teste integrado confirma estrutura e restrições esperadas | a fazer |
-| T-005 | F-01 | Implementar emissão de token de uso único, guardando só seu hash | Java | T-004 | Testes verificam validade, aleatoriedade e ausência de token puro no banco | a fazer |
-| T-006 | F-01 | Implementar consumo atômico e expiração do link | Java | T-005 | Testes impedem reutilização e consumo de link expirado | a fazer |
-| T-007 | F-01 | Implementar adaptador de envio de e-mail com configuração externa | Java | T-005 | Teste captura mensagem sem serviço real nem segredo no projeto | a fazer |
-| T-008 | F-01 | Expor solicitação do link com resposta neutra | Java | T-001, T-007 | Teste HTTP confirma mesma resposta pública para conta existente ou nova | a fazer |
-| T-009 | F-01 | Limitar abuso de solicitações de link | Java | T-008 | Teste demonstra bloqueio de excesso sem revelar existência da conta | a fazer |
-| T-010 | F-01 | Expor consumo do link e abertura de sessão | Java | T-001, T-006 | Teste HTTP integrado confirma sessão válida e recusa de replay | a fazer |
-| T-011 | F-01 | Criar tela móvel para solicitar link e mostrar feedback | Angular | T-001, T-008 e critérios de UI/UX | Teste de componente verifica entrada, carregamento, sucesso e erro | a fazer |
-| T-012 | F-01 | Criar fluxo de retorno do link no frontend | Angular | T-001, T-010 e critérios de UI/UX | Teste de componente verifica sucesso, expiração e falha | a fazer |
-| T-013 | F-01 | Testar integração do fluxo de link com banco e e-mail capturado | Java | T-008, T-010 | Teste integrado passa com PostgreSQL e sem serviço de e-mail real | a fazer |
-| T-014 | F-01 | Revisar os casos de abuso e isolamento do login | Segurança | T-009, T-010, T-013 | Testes comprovam expiração, replay, resposta neutra e limites de solicitação | a fazer |
-| T-015 | F-01 | Verificar login em viewport móvel | QA | T-011, T-012 | Jornada Playwright passa em ambiente de teste | a fazer |
-| T-016 | F-01 | Conferir os portões de entrega da história | QA | T-013, T-014, T-015 | Cobertura, testes, scanner de segredos e pendências registrados | a fazer |
+As tarefas [T-001](features/F-01/tarefas/T-001.md) a [T-016](features/F-01/tarefas/T-016.md) são um primeiro refinamento. O arquiteto deve fechar o contrato e a estratégia de sessão em T-001 antes de marcar as dependentes como prontas. Nenhuma tarefa implica credenciais reais ou envio de e-mail de produção.
 
 ## Próximo refinamento
 
 Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas para todas as histórias com contratos ainda indefinidos.
 
-## Feature técnica F-08 — ambiente local com Docker
+## Índice de tarefas
 
-| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
-| --- | --- | --- | --- | --- | --- | --- |
-| T-017 | F-08 | Registrar Docker local como primeira forma de execução e adiar AWS | Arquitetura | H-22 | Escopo, backlog, padrões e arquitetura descrevem a mesma ordem de implementação | concluída |
-| T-018 | F-08 | Configurar PostgreSQL e capturador de e-mails com Compose, sem credenciais no projeto | Infraestrutura local | T-017 | `docker compose config --quiet` válido; serviços saudáveis quando o Docker estiver ativo | em revisão |
-| T-019 | F-08 | Criar imagem da API Java 17 e adicioná-la ao Compose | Java | T-002, T-018 | API inicia pelo Compose e conecta ao PostgreSQL e SMTP local | bloqueada |
-| T-020 | F-08 | Criar imagem do frontend Angular e adicioná-la ao Compose | Angular | frontend criado, T-019 | Interface acessível localmente e chamadas à API funcionam | bloqueada |
-| T-021 | F-08 | Verificar jornada local de login por link | QA | T-019, T-020 e H-01 implementada | Jornada reproduzível passa sem AWS nem envio externo de e-mail | bloqueada |
-
-## Feature técnica F-09 — apresentação do repositório
-
-| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
-| --- | --- | --- | --- | --- | --- | --- |
-| T-022 | F-09 | Escrever README sobre orquestração, escopo, stack e estado real do projeto | Documentação | H-23 | Texto confere com escopo e padrões; links locais existentes | concluída |
-| T-023 | F-09 | Criar imagens SVG locais e integrá-las ao README | UI/UX | T-022 | SVGs válidos, legíveis e com texto alternativo no Markdown | concluída |
-| T-024 | F-09 | Atualizar o estado do Docker no README após a integração da F-08 | Documentação | T-023, F-08 | Links para Compose e guia local existentes; estado da aplicação preciso | concluída |
-
-## Feature técnica F-11 — organização do backlog
-
-| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
-| --- | --- | --- | --- | --- | --- | --- |
-| T-027 | F-11 | Separar features e histórias em arquivos próprios, mantendo índice no backlog | Produto | H-25 | Todos os IDs e critérios preservados; links válidos | concluída |
-| T-028 | F-11 | Separar tarefas em arquivos próprios e adaptar o validador de commits | Arquitetura | T-027 | Estados e verificações preservados; commits válidos e inválidos reconhecidos | a fazer |
-| T-029 | F-11 | Atualizar instruções e validar a estrutura completa | QA | T-028 | Agentes apontam para as novas fontes; índices e vínculos conferidos | a fazer |
+| Tarefa | Feature |
+| --- | --- |
+| [T-001](features/F-01/tarefas/T-001.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-002](features/F-01/tarefas/T-002.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-003](features/F-01/tarefas/T-003.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-004](features/F-01/tarefas/T-004.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-005](features/F-01/tarefas/T-005.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-006](features/F-01/tarefas/T-006.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-007](features/F-01/tarefas/T-007.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-008](features/F-01/tarefas/T-008.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-009](features/F-01/tarefas/T-009.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-010](features/F-01/tarefas/T-010.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-011](features/F-01/tarefas/T-011.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-012](features/F-01/tarefas/T-012.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-013](features/F-01/tarefas/T-013.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-014](features/F-01/tarefas/T-014.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-015](features/F-01/tarefas/T-015.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-016](features/F-01/tarefas/T-016.md) | [F-01](features/F-01/FEATURE.md) |
+| [T-017](features/F-08/tarefas/T-017.md) | [F-08](features/F-08/FEATURE.md) |
+| [T-018](features/F-08/tarefas/T-018.md) | [F-08](features/F-08/FEATURE.md) |
+| [T-019](features/F-08/tarefas/T-019.md) | [F-08](features/F-08/FEATURE.md) |
+| [T-020](features/F-08/tarefas/T-020.md) | [F-08](features/F-08/FEATURE.md) |
+| [T-021](features/F-08/tarefas/T-021.md) | [F-08](features/F-08/FEATURE.md) |
+| [T-022](features/F-09/tarefas/T-022.md) | [F-09](features/F-09/FEATURE.md) |
+| [T-023](features/F-09/tarefas/T-023.md) | [F-09](features/F-09/FEATURE.md) |
+| [T-024](features/F-09/tarefas/T-024.md) | [F-09](features/F-09/FEATURE.md) |
+| [T-027](features/F-11/tarefas/T-027.md) | [F-11](features/F-11/FEATURE.md) |
+| [T-028](features/F-11/tarefas/T-028.md) | [F-11](features/F-11/FEATURE.md) |
+| [T-029](features/F-11/tarefas/T-029.md) | [F-11](features/F-11/FEATURE.md) |

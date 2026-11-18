@@ -6,3 +6,9 @@
 ## Histórias
 
 - [H-23](historias/H-23.md)
+
+## Tarefas
+
+- [T-022](tarefas/T-022.md)
+- [T-023](tarefas/T-023.md)
+- [T-024](tarefas/T-024.md)

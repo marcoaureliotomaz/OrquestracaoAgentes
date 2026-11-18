@@ -8,3 +8,7 @@
 - [H-04](historias/H-04.md)
 - [H-05](historias/H-05.md)
 - [H-06](historias/H-06.md)
+
+## Tarefas
+
+Ainda não refinadas.
