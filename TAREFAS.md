@@ -58,3 +58,11 @@ Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas 
 | T-022 | F-09 | Escrever README sobre orquestração, escopo, stack e estado real do projeto | Documentação | H-23 | Texto confere com escopo e padrões; links locais existentes | concluída |
 | T-023 | F-09 | Criar imagens SVG locais e integrá-las ao README | UI/UX | T-022 | SVGs válidos, legíveis e com texto alternativo no Markdown | concluída |
 | T-024 | F-09 | Atualizar o estado do Docker no README após a integração da F-08 | Documentação | T-023, F-08 | Links para Compose e guia local existentes; estado da aplicação preciso | concluída |
+
+## Feature técnica F-11 — organização do backlog
+
+| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
+| --- | --- | --- | --- | --- | --- | --- |
+| T-027 | F-11 | Separar features e histórias em arquivos próprios, mantendo índice no backlog | Produto | H-25 | Todos os IDs e critérios preservados; links válidos | concluída |
+| T-028 | F-11 | Separar tarefas em arquivos próprios e adaptar o validador de commits | Arquitetura | T-027 | Estados e verificações preservados; commits válidos e inválidos reconhecidos | a fazer |
+| T-029 | F-11 | Atualizar instruções e validar a estrutura completa | QA | T-028 | Agentes apontam para as novas fontes; índices e vínculos conferidos | a fazer |
