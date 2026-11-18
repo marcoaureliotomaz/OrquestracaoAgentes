@@ -14,6 +14,17 @@ A verificação de segredos definida em `SEGREDOS.md` também é portão de entr
 6. Se um portão não puder rodar por dependência externa ou falha do ambiente, a entrega informa o comando, o erro e o risco; não declare aprovação completa.
 7. Antes de concluir uma história, conferir `TAREFAS.md` e `DIVIDA_TECNICA.md`: todas as tarefas necessárias devem estar concluídas, achados devem ter destino explícito e nenhum item P0 pode permanecer aberto.
 
+## Portão de conclusão por feature
+
+Antes de declarar **qualquer feature concluída**, QA consolida a validação das histórias e tarefas que pertencem à sua `F-xx`. A conclusão exige, em conjunto:
+
+1. **Aceite:** cada critério das histórias da feature tem resultado `aprovado` ou `reprovado`, com evidência identificável (teste automatizado, verificação manual reproduzível ou artefato). Um critério reprovado ou sem verificação mantém a feature pendente.
+2. **Cobertura:** executar os testes dos módulos de produção alterados e anexar os percentuais e o escopo medido. Backend exige 95% de linhas e ramos; frontend exige 95% de linhas, ramos, funções e statements. Não usar a cobertura de outro módulo para compensar um resultado abaixo do limite. Uma feature sem código executável registra `não aplicável`, com justificativa e verificação dos artefatos que entregou.
+3. **Integração:** executar testes integrados pertinentes às fronteiras alteradas, como API–banco, migrações, autenticação, frontend–API ou Compose. Registrar comando, ambiente e resultado. Quando não houver fronteira de integração na feature, justificar `não aplicável`; teste essencial não executado bloqueia a conclusão.
+4. **Revisões:** registrar achados de segurança, performance e QA, verificar `DIVIDA_TECNICA.md` e aplicar os portões gerais deste documento e de `SEGREDOS.md`.
+
+O relatório por feature usa `docs/MODELO_VALIDACAO_FEATURE.md`. Não marque a feature como aprovada, não declare a história concluída por inferência e não solicite integração final em `main` enquanto faltar evidência obrigatória. O code review humano ocorre após o relatório.
+
 ## Camadas de teste
 
 | Camada | Ferramentas padrão | O que verificar |

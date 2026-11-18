@@ -14,7 +14,7 @@
 - Formato do assunto: `tipo(F-xx T-xxx): descrição objetiva`, por exemplo `feat(F-01 T-005): emitir link de acesso com token protegido`. Tipos permitidos: `feat`, `fix`, `test`, `docs`, `refactor` e `chore`.
 - Antes do commit, examine o diff preparado, execute a verificação da tarefa e `scripts/scan-secrets.ps1`. Adicione apenas os arquivos da tarefa, em vez de incluir alterações não relacionadas.
 - Após uma revisão que exigir correção, crie uma tarefa de correção com novo commit. Preserve a relação entre tarefa e commit; não junte commits de subtarefas diferentes em um único commit.
-- A conclusão da feature exige critérios do backlog, portões de `QUALIDADE_TESTES.md`, revisão de segurança, performance e QA, e uma entrega legível para o code review do usuário. A integração em `main` ocorre após esse code review.
+- A conclusão da feature exige relatório de QA por `F-xx` com critérios de aceite de todas as suas histórias, cobertura e testes de integração aplicáveis, além dos portões de `QUALIDADE_TESTES.md` e das revisões de segurança e performance. A entrega deve ser legível para o code review do usuário; a integração final em `main` ocorre após esse code review.
 - Integre com fast-forward (`git merge --ff-only`) após atualizar a branch da feature com `main`. Preserve os commits por subtarefa no histórico; não faça squash de tarefas diferentes.
 
 ## Rastreabilidade

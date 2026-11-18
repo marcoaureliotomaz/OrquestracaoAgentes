@@ -15,6 +15,7 @@ Derivado de `ESCOPO.md`. Ordem sugerida para a primeira versão web: segurança 
 | F-07 | Compartilhamento: gerar imagem do progresso com controle do usuário | 3 Compartilhamento; 5 | P1 |
 | F-08 | Ambiente local: executar e testar a aplicação completa com Docker Compose | 6 Plataforma técnica | P0 técnico |
 | F-09 | Apresentação do projeto: explicar a POC, a orquestração de agentes e o estado da implementação | Documentação do repositório | P0 técnico |
+| F-10 | Validação por feature: reunir evidências de testes, integração e aceite antes da conclusão | Qualidade do processo | P0 técnico |
 
 ## Histórias
 
@@ -234,6 +235,16 @@ Derivado de `ESCOPO.md`. Ordem sugerida para a primeira versão web: segurança 
   2. O escopo do tracker, a stack e os controles de segurança, testes e versionamento aparecem com links para os documentos fonte.
   3. Ícones e imagens locais ajudam a leitura; as imagens têm texto alternativo e não dependem de serviço externo.
   4. O texto distingue planejamento e artefatos existentes da aplicação ainda não implementada.
+
+### H-24 — Validar a conclusão de cada feature
+
+- Feature: F-10; origem: política de qualidade; prioridade: P0 técnico; dependências: `QUALIDADE_TESTES.md` e histórias da feature avaliada.
+- História: Como responsável pelo code review, quero ver evidências de cobertura, integração e critérios de aceite para decidir se uma feature está concluída.
+- Critérios de aceite:
+  1. Cada história da feature tem seus critérios de aceite conferidos com resultado e evidência identificável.
+  2. Os módulos de produção alterados têm relatórios de cobertura dentro dos limites exigidos; ausência de código executável é registrada como não aplicável com justificativa.
+  3. Os testes de integração pertinentes são executados e seus resultados registrados; impedimentos deixam a feature pendente.
+  4. QA publica um resumo por feature com falhas, pendências e decisão de aprovação ou reprovação antes do code review humano.
 
 ## Critérios transversais de conclusão
 
