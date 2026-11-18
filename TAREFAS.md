@@ -64,4 +64,4 @@ Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas 
 | ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
 | --- | --- | --- | --- | --- | --- | --- |
 | T-025 | F-10 | Definir o portão de cobertura, integração e aceite para cada feature | QA | H-24 | Políticas e papéis exigem evidência por feature antes da conclusão | concluída |
-| T-026 | F-10 | Criar modelo curto de relatório de validação da feature | QA | T-025 | Modelo permite registrar comandos, métricas, critérios e decisão | pronta |
+| T-026 | F-10 | Criar modelo curto de relatório de validação da feature | QA | T-025 | Modelo permite registrar comandos, métricas, critérios e decisão | concluída |
