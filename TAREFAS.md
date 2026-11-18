@@ -71,4 +71,4 @@ Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas 
 | ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
 | --- | --- | --- | --- | --- | --- | --- |
 | T-032 | F-12 | Definir a sequência obrigatória de sincronização e criação da branch | Arquitetura | H-26 | Fluxo impede implementação sobre main desatualizada ou com arquivos pendentes | concluída |
-| T-033 | F-12 | Criar comando que prepara main e abre branch nova com validações | Infraestrutura local | T-032 | Testes em repositório isolado confirmam sucesso e rejeição de estados inseguros | pronta |
+| T-033 | F-12 | Criar comando que prepara main e abre branch nova com validações | Infraestrutura local | T-032 | Testes em repositório isolado confirmam sucesso e rejeição de estados inseguros | concluída |
