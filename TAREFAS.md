@@ -57,3 +57,4 @@ Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas 
 | --- | --- | --- | --- | --- | --- | --- |
 | T-022 | F-09 | Escrever README sobre orquestração, escopo, stack e estado real do projeto | Documentação | H-23 | Texto confere com escopo e padrões; links locais existentes | concluída |
 | T-023 | F-09 | Criar imagens SVG locais e integrá-las ao README | UI/UX | T-022 | SVGs válidos, legíveis e com texto alternativo no Markdown | concluída |
+| T-024 | F-09 | Atualizar o estado do Docker no README após a integração da F-08 | Documentação | T-023, F-08 | Links para Compose e guia local existentes; estado da aplicação preciso | concluída |

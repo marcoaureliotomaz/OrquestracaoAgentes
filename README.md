@@ -63,6 +63,6 @@ As versões exatas serão fixadas ao criar os módulos. Consulte [`PADROES_TECNI
 
 ## 🚧 Estado atual e execução
 
-O repositório contém **escopo, backlog, tarefas, agentes e controles de qualidade**. A API Java e o frontend Angular ainda não foram implementados; portanto, o tracker completo ainda não pode ser executado. A preparação do Docker Compose está em andamento na branch `feature/F-08-ambiente-local-docker`. A implantação AWS fica para depois da validação local.
+O repositório contém **escopo, backlog, tarefas, agentes e controles de qualidade**. O [`compose.yaml`](compose.yaml) já prepara PostgreSQL e Mailpit, conforme [`LOCAL_DOCKER.md`](LOCAL_DOCKER.md). A API Java e o frontend Angular ainda não foram implementados; portanto, o tracker completo ainda não pode ser executado. A implantação AWS fica para depois da validação local.
 
 Para iniciar a implementação, siga a próxima tarefa pronta em [`TAREFAS.md`](TAREFAS.md), verifique sua dependência e trabalhe na branch da feature correspondente. O primeiro fluxo de produto planejado é o acesso por link de e-mail (`H-01`).
