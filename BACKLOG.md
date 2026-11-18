@@ -16,6 +16,7 @@ Derivado de `ESCOPO.md`. Ordem sugerida para a primeira versão web: segurança 
 | F-08 | Ambiente local: executar e testar a aplicação completa com Docker Compose | 6 Plataforma técnica | P0 técnico |
 | F-09 | Apresentação do projeto: explicar a POC, a orquestração de agentes e o estado da implementação | Documentação do repositório | P0 técnico |
 | F-10 | Validação por feature: reunir evidências de testes, integração e aceite antes da conclusão | Qualidade do processo | P0 técnico |
+| F-12 | Início seguro de feature: atualizar main e criar branch exclusiva antes de implementar | Versionamento do projeto | P0 técnico |
 
 ## Histórias
 
@@ -245,6 +246,16 @@ Derivado de `ESCOPO.md`. Ordem sugerida para a primeira versão web: segurança 
   2. Os módulos de produção alterados têm relatórios de cobertura dentro dos limites exigidos; ausência de código executável é registrada como não aplicável com justificativa.
   3. Os testes de integração pertinentes são executados e seus resultados registrados; impedimentos deixam a feature pendente.
   4. QA publica um resumo por feature com falhas, pendências e decisão de aprovação ou reprovação antes do code review humano.
+
+### H-26 — Iniciar cada feature da main atualizada
+
+- Feature: F-12; origem: regra de versionamento; prioridade: P0 técnico; dependências: repositório Git e `origin/main` disponíveis.
+- História: Como responsável pela implementação, quero começar uma feature a partir da `main` atualizada para evitar trabalho sobre uma base antiga.
+- Critérios de aceite:
+  1. Antes de criar a branch, o estado local está limpo e `origin/main` foi consultada com sucesso.
+  2. A `main` local é atualizada somente por fast-forward e seu commit coincide com `origin/main`.
+  3. A branch nova segue `feature/F-xx-descricao` e nasce do commit atualizado de `main`; uma branch existente ou erro de sincronização bloqueia o início.
+  4. As instruções do orquestrador exigem essa preparação antes da primeira tarefa de uma feature.
 
 ## Critérios transversais de conclusão
 

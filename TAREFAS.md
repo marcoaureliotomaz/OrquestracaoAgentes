@@ -65,3 +65,10 @@ Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas 
 | --- | --- | --- | --- | --- | --- | --- |
 | T-025 | F-10 | Definir o portão de cobertura, integração e aceite para cada feature | QA | H-24 | Políticas e papéis exigem evidência por feature antes da conclusão | concluída |
 | T-026 | F-10 | Criar modelo curto de relatório de validação da feature | QA | T-025 | Modelo permite registrar comandos, métricas, critérios e decisão | concluída |
+
+## Feature técnica F-12 — início seguro de feature
+
+| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
+| --- | --- | --- | --- | --- | --- | --- |
+| T-032 | F-12 | Definir a sequência obrigatória de sincronização e criação da branch | Arquitetura | H-26 | Fluxo impede implementação sobre main desatualizada ou com arquivos pendentes | concluída |
+| T-033 | F-12 | Criar comando que prepara main e abre branch nova com validações | Infraestrutura local | T-032 | Testes em repositório isolado confirmam sucesso e rejeição de estados inseguros | pronta |

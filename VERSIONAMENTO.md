@@ -4,6 +4,8 @@
 
 - `main` guarda a base compartilhada. O commit inicial de documentação não pertence a uma feature de produto.
 - Cada feature `F-xx` de `BACKLOG.md` recebe **uma branch exclusiva**, criada a partir de `main`: `feature/F-01-acesso-conta`, `feature/F-02-habitos` etc.
+- Antes da **primeira implementação de uma feature**, exija árvore de trabalho limpa, execute `git fetch origin`, atualize `main` apenas por fast-forward e confirme que `main` e `origin/main` apontam ao mesmo commit. Só então crie `feature/F-xx-descricao` a partir de `main`, usando `scripts/start-feature.ps1`. Se a sincronização falhar ou a branch já existir, interrompa a criação e resolva a causa antes de implementar.
+- Nos prompts seguintes da mesma feature, continue na branch existente; não abra outra branch para cada tarefa. Verifique se ela incorpora as mudanças relevantes de `main` antes de continuar.
 - Uma branch de feature contém apenas histórias e tarefas dessa feature. Não misture trabalho de duas features na mesma branch. Se uma mudança compartilhada for necessária, registre-a como tarefa pequena e indique a feature que a introduz; mudanças independentes exigem uma feature técnica própria no backlog.
 - Não inicie uma tarefa se a branch atual não corresponder à feature indicada em `TAREFAS.md`.
 
