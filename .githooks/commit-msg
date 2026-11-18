@@ -1,0 +1,3 @@
+#!/bin/sh
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/validate-commit.ps1 -MessageFile "$1"
+exit $?
