@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:17.12-alpine3.24
+    environment:
+      POSTGRES_DB: habit_tracker
+      POSTGRES_USER: habit_tracker
+      POSTGRES_PASSWORD: ${HABIT_DB_PASSWORD:?Defina HABIT_DB_PASSWORD fora do repositorio}
+    ports:
+      - "127.0.0.1:15432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U habit_tracker -d habit_tracker"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  mailpit:
+    image: axllent/mailpit:v1.27.4
+    ports:
+      - "127.0.0.1:8025:8025"
+      - "127.0.0.1:1025:1025"
+
+volumes:
+  postgres_data:
