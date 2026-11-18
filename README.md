@@ -1,5 +1,7 @@
 # Habit Tracker · POC de orquestração de agentes
 
+![Ilustração da POC: agentes conectados a um calendário de hábitos em quadrados verdes](docs/images/banner-orquestracao.svg)
+
 > 🧪 Um experimento de desenvolvimento de software com agentes de IA coordenados, usando um tracker de hábitos como produto real para testar o processo.
 
 ## 🤖 O foco do projeto
@@ -7,6 +9,8 @@
 O objetivo principal é **experimentar uma forma controlada de orquestrar agentes de IA para desenvolver uma aplicação**. O tracker de hábitos fornece requisitos concretos, decisões de arquitetura, interface, segurança e testes para avaliar essa abordagem.
 
 O agente principal recebe o pedido, consulta os documentos do projeto, divide o trabalho em tarefas pequenas e aciona os especialistas necessários. Os arquivos em [`agentes/`](agentes/) descrevem papéis e critérios de trabalho; **são instruções Markdown, não programas que executam sozinhos**. A execução e a coordenação acontecem na sessão do agente de codificação.
+
+![Diagrama do fluxo entre pedido, documentos, orquestrador, especialistas, commits e revisões](docs/images/fluxo-agentes.svg)
 
 ### 🧠 Recursos e técnicas de IA
 
@@ -19,7 +23,7 @@ O agente principal recebe o pedido, consulta os documentos do projeto, divide o 
 | **Revisão com evidências** | Segurança, performance e QA verificam código, testes e resultados; o usuário faz o code review antes da integração. |
 | **Rastreabilidade no Git** | Uma branch por feature e um commit pequeno por subtarefa, identificado por `F-xx T-xxx`. |
 
-A IA auxilia planejamento, implementação e revisão. Decisões abertas permanecem registradas; o agente não deve inventar requisitos para concluir uma tarefa. O processo prioriza **segurança → performance → qualidade**.
+A IA já auxilia o planejamento; seu uso na implementação e na revisão seguirá o mesmo fluxo quando o código existir. Decisões abertas permanecem registradas; o agente não deve inventar requisitos para concluir uma tarefa. O processo prioriza **segurança → performance → qualidade**.
 
 ## 🌱 O produto: tracker de hábitos
 

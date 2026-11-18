@@ -5,7 +5,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $rootPath = (Resolve-Path -LiteralPath $Root).Path
 $excludedDirectories = @('.git', 'node_modules', '.angular')
-$textExtensions = @('.md', '.txt', '.json', '.yml', '.yaml', '.properties', '.java', '.ts', '.tsx', '.js', '.jsx', '.xml', '.ps1', '.sh', '.toml', '.sql', '.html', '.css')
+$textExtensions = @('.md', '.txt', '.json', '.yml', '.yaml', '.properties', '.java', '.ts', '.tsx', '.js', '.jsx', '.xml', '.ps1', '.sh', '.toml', '.sql', '.html', '.css', '.svg')
 $sensitiveFileName = '^(?:\.env(?:\..+)?|credentials(?:\..+)?|client_secret.*\.json|service-account.*\.json|application-(?:local|secret|secrets)\.(?:yml|yaml|properties)|.+\.(?:pem|key|p12|pfx|jks|keystore|tfstate)(?:\..+)?)$'
 $patterns = [ordered]@{
     'bloco de chave privada' = '-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----'

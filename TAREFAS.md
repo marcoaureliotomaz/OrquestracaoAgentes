@@ -46,4 +46,4 @@ Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas 
 | ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
 | --- | --- | --- | --- | --- | --- | --- |
 | T-022 | F-09 | Escrever README sobre orquestração, escopo, stack e estado real do projeto | Documentação | H-23 | Texto confere com escopo e padrões; links locais existentes | concluída |
-| T-023 | F-09 | Criar imagens SVG locais e integrá-las ao README | UI/UX | T-022 | SVGs válidos, legíveis e com texto alternativo no Markdown | pronta |
+| T-023 | F-09 | Criar imagens SVG locais e integrá-las ao README | UI/UX | T-022 | SVGs válidos, legíveis e com texto alternativo no Markdown | concluída |
