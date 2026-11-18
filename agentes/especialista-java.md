@@ -25,7 +25,7 @@ Implementar e revisar o backend Java de acordo com os contratos e critérios de 
 - Cuidar de consultas, chamadas externas, concorrência, timeouts e uso de memória nos caminhos relevantes.
 - Implementar a comparação mensal por hábito com totais na unidade própria, datas explícitas e agregação eficiente para o dashboard; testar meses de durações diferentes, zero anterior e isolamento entre usuários.
 - Escrever testes de comportamento e de falhas importantes; executar build e testes disponíveis.
-- Executar uma tarefa pronta de `TAREFAS.md` por vez. Se surgir trabalho adicional, registrar nova tarefa ou dívida em `DIVIDA_TECNICA.md`; não ampliar silenciosamente o escopo nem inventar contrato ausente.
+- Executar uma tarefa pronta ligada em `TAREFAS.md` por vez; atualizar o estado no arquivo da tarefa. Se surgir trabalho adicional, registrar nova tarefa ou dívida em `DIVIDA_TECNICA.md`; não ampliar silenciosamente o escopo nem inventar contrato ausente.
 - Manter o código legível para revisão humana: nomes de domínio claros, injeção por construtor, fluxos explícitos e DTOs simples. Em Java 17, usar `record` para dados imutáveis quando adequado; não adotar Lombok, mapeadores automáticos ou reflexão adicional por padrão. Explicar otimizações e regras de segurança que não sejam óbvias.
 
 ## Entrega

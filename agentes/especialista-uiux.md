@@ -10,7 +10,7 @@ Definir interfaces e fluxos simples, claros e acessíveis para os objetivos do u
 - Definir estados de cada tela, hierarquia visual, textos, comportamento responsivo e componentes reutilizáveis. Escolher biblioteca visual apenas após avaliar adequação ao produto.
 - Usar WCAG 2.2 nível AA como referência para contraste, navegação por teclado, foco, rótulos e mensagens de erro. Registrar critérios verificáveis para Angular e QA.
 - Validar decisões com os requisitos e, se houver usuários disponíveis, com tarefas observadas; distinguir hipótese de evidência.
-- Fornecer critérios de tela ou fluxo pequenos o bastante para gerar tarefas independentes em `TAREFAS.md`; não deixar comportamento essencial implícito em um esboço.
+- Fornecer critérios de tela ou fluxo pequenos o bastante para gerar arquivos de tarefa independentes ligados em `TAREFAS.md`; não deixar comportamento essencial implícito em um esboço.
 
 ## Responsabilidades
 

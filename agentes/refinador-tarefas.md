@@ -2,11 +2,11 @@
 
 ## Missão
 
-Converter a próxima história selecionada de `BACKLOG.md` em tarefas pequenas, claras e verificáveis em `TAREFAS.md`, reduzindo suposições durante a implementação.
+Converter a próxima história selecionada pelo índice `BACKLOG.md` em tarefas pequenas, claras e verificáveis em `features/F-xx/tarefas/T-xxx.md`, reduzindo suposições durante a implementação.
 
 ## Método
 
-- Leia o escopo, a história, contratos definidos pelo arquiteto, critérios de UI/UX quando houver, `QUALIDADE_TESTES.md`, `SEGREDOS.md` e dívidas abertas.
+- Leia o escopo, a história, a última rodada em `features/F-xx/PROGRESSO.md`, contratos definidos pelo arquiteto, critérios de UI/UX quando houver, `QUALIDADE_TESTES.md`, `SEGREDOS.md` e dívidas abertas.
 - Produza apenas tarefas da próxima história ou do pequeno grupo que será executado agora. Cada tarefa tem um resultado, um componente, dependências e uma prova de conclusão.
 - Registre a feature `F-xx` de cada tarefa e planeje um commit pequeno e verificável por subtarefa que alterar arquivos, conforme `VERSIONAMENTO.md`.
 - Divida trabalho entre desenho de contrato, backend, frontend, infraestrutura e verificação quando essas partes realmente existirem. Não use tarefas vagas como “implementar login completo” ou “melhorar qualidade”.
@@ -17,4 +17,4 @@ Converter a próxima história selecionada de `BACKLOG.md` em tarefas pequenas, 
 
 ## Entrega
 
-Atualize `TAREFAS.md` com tarefas prontas ou bloqueadas, ligações com a história e verificações objetivas. Informe lacunas e dependências. Não implemente código.
+Crie ou atualize cada arquivo de tarefa com história, resultado, dependências, verificação e estado; atualize os links em `TAREFAS.md` e no arquivo da feature. Informe lacunas e dependências. Não implemente código.

@@ -16,7 +16,7 @@ Estas são as escolhas padrão **para a aplicação nova** definida em `ESCOPO.m
 
 ## Metodologia de trabalho
 
-1. Refinar `ESCOPO.md` em features e histórias pequenas no `BACKLOG.md`, com critérios de aceite verificáveis.
+1. Refinar `ESCOPO.md` em arquivos individuais de feature e história sob `features/`, mantendo `BACKLOG.md` como índice, com critérios de aceite verificáveis.
 2. Implementar em fatias verticais: uma história deve atravessar as camadas necessárias e produzir comportamento demonstrável.
 3. Manter um quadro simples de trabalho: a fazer, em andamento, em revisão e concluído. Limitar trabalho simultâneo quando houver dependências.
 4. Usar exemplos de comportamento no formato dado/quando/então para critérios de aceite. Aplicar TDD especialmente a regras de domínio ou correções de defeitos; evitar testes que apenas espelham a implementação.
@@ -34,7 +34,7 @@ Estas são as escolhas padrão **para a aplicação nova** definida em `ESCOPO.m
 
 ## Legibilidade para code review humano
 
-- Cada alteração deve corresponder a uma tarefa de `TAREFAS.md`. Evite misturar funcionalidade, refatoração ampla e mudanças de formatação no mesmo conjunto de alterações.
+- Cada alteração deve corresponder a um arquivo de tarefa ligado em `TAREFAS.md`. Evite misturar funcionalidade, refatoração ampla e mudanças de formatação no mesmo conjunto de alterações.
 - Use nomes que revelem intenção e termos consistentes com o domínio. Em código novo, prefira identificadores em inglês e textos exibidos ao usuário em português; siga a convenção existente se o repositório adotar outra.
 - Escreva fluxo explícito, métodos e componentes com uma responsabilidade reconhecível. Prefira construções simples a cadeias longas, efeitos colaterais ocultos, abstrações genéricas e soluções compactas difíceis de depurar.
 - Comentários devem explicar uma decisão ou regra não evidente. Evite comentar o que o código já diz; registre decisões de arquitetura em nota curta quando afetarem vários módulos.
