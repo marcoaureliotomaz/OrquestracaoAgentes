@@ -14,11 +14,12 @@
 - Formato do assunto: `tipo(F-xx T-xxx): descrição objetiva`, por exemplo `feat(F-01 T-005): emitir link de acesso com token protegido`. Tipos permitidos: `feat`, `fix`, `test`, `docs`, `refactor` e `chore`.
 - Antes do commit, examine o diff preparado, execute a verificação da tarefa e `scripts/scan-secrets.ps1`. Adicione apenas os arquivos da tarefa, em vez de incluir alterações não relacionadas.
 - Após uma revisão que exigir correção, crie uma tarefa de correção com novo commit. Preserve a relação entre tarefa e commit; não junte commits de subtarefas diferentes em um único commit.
+- Ao encerrar um prompt de implementação, registre a rodada em `features/F-xx/PROGRESSO.md`. Inclua-a no último commit da rodada; se nenhuma tarefa terminar, use um commit documental referenciando a tarefa abordada. O histórico da feature não substitui o estado de cada arquivo de tarefa.
 - A conclusão da feature exige critérios do backlog, portões de `QUALIDADE_TESTES.md`, revisão de segurança, performance e QA, e uma entrega legível para o code review do usuário. A integração em `main` ocorre após esse code review.
 - Integre com fast-forward (`git merge --ff-only`) após atualizar a branch da feature com `main`. Preserve os commits por subtarefa no histórico; não faça squash de tarefas diferentes.
 
 ## Rastreabilidade
 
-`ESCOPO.md` → `BACKLOG.md` (índice) → `features/F-xx/FEATURE.md` → `features/F-xx/historias/H-xx.md` → `features/F-xx/tarefas/T-xxx.md` → branch `feature/F-xx-*` → commit com `F-xx T-xxx` no assunto. `TAREFAS.md` é o índice das tarefas. O hash é obtido pelo histórico Git; não precisa ser escrito no arquivo da tarefa.
+`ESCOPO.md` → `BACKLOG.md` (índice) → `features/F-xx/FEATURE.md` → `features/F-xx/historias/H-xx.md` → `features/F-xx/tarefas/T-xxx.md` → `features/F-xx/PROGRESSO.md` (rodadas) → branch `feature/F-xx-*` → commit com `F-xx T-xxx` no assunto. `TAREFAS.md` é o índice das tarefas. O hash é obtido pelo histórico Git; não precisa ser escrito no arquivo da tarefa.
 
 O hook `.githooks/commit-msg` valida o nome da branch, a mensagem, a relação tarefa–feature, os vínculos do backlog e a verificação de segredos. Configure o repositório local com `git config core.hooksPath .githooks`; a CI deverá repetir as verificações quando existir.

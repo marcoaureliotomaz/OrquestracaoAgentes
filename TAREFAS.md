@@ -53,3 +53,5 @@ Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas 
 | [T-027](features/F-11/tarefas/T-027.md) | [F-11](features/F-11/FEATURE.md) |
 | [T-028](features/F-11/tarefas/T-028.md) | [F-11](features/F-11/FEATURE.md) |
 | [T-029](features/F-11/tarefas/T-029.md) | [F-11](features/F-11/FEATURE.md) |
+| [T-030](features/F-11/tarefas/T-030.md) | [F-11](features/F-11/FEATURE.md) |
+| [T-031](features/F-11/tarefas/T-031.md) | [F-11](features/F-11/FEATURE.md) |
