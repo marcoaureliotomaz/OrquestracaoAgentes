@@ -22,36 +22,27 @@ As tarefas [T-001](features/F-01/tarefas/T-001.md) a [T-016](features/F-01/taref
 
 Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas para todas as histórias com contratos ainda indefinidos.
 
-## Índice de tarefas
+## Feature técnica F-08 — ambiente local com Docker
 
-| Tarefa | Feature |
-| --- | --- |
-| [T-001](features/F-01/tarefas/T-001.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-002](features/F-01/tarefas/T-002.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-003](features/F-01/tarefas/T-003.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-004](features/F-01/tarefas/T-004.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-005](features/F-01/tarefas/T-005.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-006](features/F-01/tarefas/T-006.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-007](features/F-01/tarefas/T-007.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-008](features/F-01/tarefas/T-008.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-009](features/F-01/tarefas/T-009.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-010](features/F-01/tarefas/T-010.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-011](features/F-01/tarefas/T-011.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-012](features/F-01/tarefas/T-012.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-013](features/F-01/tarefas/T-013.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-014](features/F-01/tarefas/T-014.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-015](features/F-01/tarefas/T-015.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-016](features/F-01/tarefas/T-016.md) | [F-01](features/F-01/FEATURE.md) |
-| [T-017](features/F-08/tarefas/T-017.md) | [F-08](features/F-08/FEATURE.md) |
-| [T-018](features/F-08/tarefas/T-018.md) | [F-08](features/F-08/FEATURE.md) |
-| [T-019](features/F-08/tarefas/T-019.md) | [F-08](features/F-08/FEATURE.md) |
-| [T-020](features/F-08/tarefas/T-020.md) | [F-08](features/F-08/FEATURE.md) |
-| [T-021](features/F-08/tarefas/T-021.md) | [F-08](features/F-08/FEATURE.md) |
-| [T-022](features/F-09/tarefas/T-022.md) | [F-09](features/F-09/FEATURE.md) |
-| [T-023](features/F-09/tarefas/T-023.md) | [F-09](features/F-09/FEATURE.md) |
-| [T-024](features/F-09/tarefas/T-024.md) | [F-09](features/F-09/FEATURE.md) |
-| [T-027](features/F-11/tarefas/T-027.md) | [F-11](features/F-11/FEATURE.md) |
-| [T-028](features/F-11/tarefas/T-028.md) | [F-11](features/F-11/FEATURE.md) |
-| [T-029](features/F-11/tarefas/T-029.md) | [F-11](features/F-11/FEATURE.md) |
-| [T-030](features/F-11/tarefas/T-030.md) | [F-11](features/F-11/FEATURE.md) |
-| [T-031](features/F-11/tarefas/T-031.md) | [F-11](features/F-11/FEATURE.md) |
+| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
+| --- | --- | --- | --- | --- | --- | --- |
+| T-017 | F-08 | Registrar Docker local como primeira forma de execução e adiar AWS | Arquitetura | H-22 | Escopo, backlog, padrões e arquitetura descrevem a mesma ordem de implementação | concluída |
+| T-018 | F-08 | Configurar PostgreSQL e capturador de e-mails com Compose, sem credenciais no projeto | Infraestrutura local | T-017 | `docker compose config --quiet` válido; serviços saudáveis quando o Docker estiver ativo | em revisão |
+| T-019 | F-08 | Criar imagem da API Java 17 e adicioná-la ao Compose | Java | T-002, T-018 | API inicia pelo Compose e conecta ao PostgreSQL e SMTP local | bloqueada |
+| T-020 | F-08 | Criar imagem do frontend Angular e adicioná-la ao Compose | Angular | frontend criado, T-019 | Interface acessível localmente e chamadas à API funcionam | bloqueada |
+| T-021 | F-08 | Verificar jornada local de login por link | QA | T-019, T-020 e H-01 implementada | Jornada reproduzível passa sem AWS nem envio externo de e-mail | bloqueada |
+
+## Feature técnica F-09 — apresentação do repositório
+
+| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
+| --- | --- | --- | --- | --- | --- | --- |
+| T-022 | F-09 | Escrever README sobre orquestração, escopo, stack e estado real do projeto | Documentação | H-23 | Texto confere com escopo e padrões; links locais existentes | concluída |
+| T-023 | F-09 | Criar imagens SVG locais e integrá-las ao README | UI/UX | T-022 | SVGs válidos, legíveis e com texto alternativo no Markdown | concluída |
+| T-024 | F-09 | Atualizar o estado do Docker no README após a integração da F-08 | Documentação | T-023, F-08 | Links para Compose e guia local existentes; estado da aplicação preciso | concluída |
+
+## Feature técnica F-10 — validação por feature
+
+| ID | Feature | Resultado único | Responsável | Depende de | Verificação de conclusão | Estado |
+| --- | --- | --- | --- | --- | --- | --- |
+| T-025 | F-10 | Definir o portão de cobertura, integração e aceite para cada feature | QA | H-24 | Políticas e papéis exigem evidência por feature antes da conclusão | concluída |
+| T-026 | F-10 | Criar modelo curto de relatório de validação da feature | QA | T-025 | Modelo permite registrar comandos, métricas, critérios e decisão | concluída |

@@ -4,18 +4,18 @@ Derivado de `ESCOPO.md`. Este arquivo é o **índice**: cada feature tem `featur
 
 ## Features
 
-| ID | Feature | Prioridade |
-| --- | --- | --- |
-| [F-01](features/F-01/FEATURE.md) | Acesso e conta: entrar com segurança e administrar dados básicos | P0 |
-| [F-02](features/F-02/FEATURE.md) | Catálogo pessoal: criar e organizar vários hábitos | P0 |
-| [F-03](features/F-03/FEATURE.md) | Registro diário: marcar uma execução rapidamente e ver totais corretos | P0 |
-| [F-04](features/F-04/FEATURE.md) | Planejamento: configurar metas diárias, em dias escolhidos ou registro livre | P0 |
-| [F-05](features/F-05/FEATURE.md) | Acompanhamento: entender frequência, quantidade, histórico e evolução mensal | P0 |
-| [F-06](features/F-06/FEATURE.md) | Experiência e temas: usar bem no celular e escolher aparência | P0 para uso móvel; P1 para temas |
-| [F-07](features/F-07/FEATURE.md) | Compartilhamento: gerar imagem do progresso com controle do usuário | P1 |
-| [F-08](features/F-08/FEATURE.md) | Ambiente local: executar e testar a aplicação completa com Docker Compose | P0 técnico |
-| [F-09](features/F-09/FEATURE.md) | Apresentação do projeto: explicar a POC, a orquestração de agentes e o estado da implementação | P0 técnico |
-| [F-11](features/F-11/FEATURE.md) | Organização do backlog: manter features, histórias e tarefas em arquivos próprios | P0 técnico |
+| ID | Feature e resultado para o usuário | Escopo | Prioridade |
+| --- | --- | --- | --- |
+| F-01 | Acesso e conta: entrar com segurança e administrar dados básicos | 3 Conta e acesso; 5; 6 Segurança | P0 |
+| F-02 | Catálogo pessoal: criar e organizar vários hábitos | 3 Hábitos e metas; 5 | P0 |
+| F-03 | Registro diário: marcar uma execução rapidamente e ver totais corretos | 3 Registro diário; 5 | P0 |
+| F-04 | Planejamento: configurar metas diárias, em dias escolhidos ou registro livre | 3 Hábitos e metas; 7.5 | P0 |
+| F-05 | Acompanhamento: entender frequência, quantidade, histórico e evolução mensal | 3 Registro diário; 5; 7.4 e 7.12 | P0 |
+| F-06 | Experiência e temas: usar bem no celular e escolher aparência | 3 Interface; 6 Qualidade | P0 para uso móvel; P1 para temas |
+| F-07 | Compartilhamento: gerar imagem do progresso com controle do usuário | 3 Compartilhamento; 5 | P1 |
+| F-08 | Ambiente local: executar e testar a aplicação completa com Docker Compose | 6 Plataforma técnica | P0 técnico |
+| F-09 | Apresentação do projeto: explicar a POC, a orquestração de agentes e o estado da implementação | Documentação do repositório | P0 técnico |
+| F-10 | Validação por feature: reunir evidências de testes, integração e aceite antes da conclusão | Qualidade do processo | P0 técnico |
 
 ## Histórias
 
@@ -45,6 +45,16 @@ Derivado de `ESCOPO.md`. Este arquivo é o **índice**: cada feature tem `featur
 | [H-22](features/F-08/historias/H-22.md) | [F-08](features/F-08/FEATURE.md) | Executar a aplicação localmente com Docker |
 | [H-23](features/F-09/historias/H-23.md) | [F-09](features/F-09/FEATURE.md) | Apresentar a POC no README |
 | [H-25](features/F-11/historias/H-25.md) | [F-11](features/F-11/FEATURE.md) | Navegar pelo backlog em arquivos separados |
+
+### H-24 — Validar a conclusão de cada feature
+
+- Feature: F-10; origem: política de qualidade; prioridade: P0 técnico; dependências: `QUALIDADE_TESTES.md` e histórias da feature avaliada.
+- História: Como responsável pelo code review, quero ver evidências de cobertura, integração e critérios de aceite para decidir se uma feature está concluída.
+- Critérios de aceite:
+  1. Cada história da feature tem seus critérios de aceite conferidos com resultado e evidência identificável.
+  2. Os módulos de produção alterados têm relatórios de cobertura dentro dos limites exigidos; ausência de código executável é registrada como não aplicável com justificativa.
+  3. Os testes de integração pertinentes são executados e seus resultados registrados; impedimentos deixam a feature pendente.
+  4. QA publica um resumo por feature com falhas, pendências e decisão de aprovação ou reprovação antes do code review humano.
 
 ## Critérios transversais de conclusão
 
