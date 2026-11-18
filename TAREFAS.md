@@ -46,3 +46,15 @@ Após H-01, refinar H-02 e a próxima história selecionada. Não abrir tarefas 
 | --- | --- | --- | --- | --- | --- | --- |
 | T-025 | F-10 | Definir o portão de cobertura, integração e aceite para cada feature | QA | H-24 | Políticas e papéis exigem evidência por feature antes da conclusão | concluída |
 | T-026 | F-10 | Criar modelo curto de relatório de validação da feature | QA | T-025 | Modelo permite registrar comandos, métricas, critérios e decisão | concluída |
+
+## Links dos arquivos de tarefas
+
+- F-01: [T-001](features/F-01/tarefas/T-001.md), [T-002](features/F-01/tarefas/T-002.md), [T-003](features/F-01/tarefas/T-003.md), [T-004](features/F-01/tarefas/T-004.md), [T-005](features/F-01/tarefas/T-005.md), [T-006](features/F-01/tarefas/T-006.md), [T-007](features/F-01/tarefas/T-007.md), [T-008](features/F-01/tarefas/T-008.md), [T-009](features/F-01/tarefas/T-009.md), [T-010](features/F-01/tarefas/T-010.md), [T-011](features/F-01/tarefas/T-011.md), [T-012](features/F-01/tarefas/T-012.md), [T-013](features/F-01/tarefas/T-013.md), [T-014](features/F-01/tarefas/T-014.md), [T-015](features/F-01/tarefas/T-015.md), [T-016](features/F-01/tarefas/T-016.md).
+- F-08: [T-017](features/F-08/tarefas/T-017.md), [T-018](features/F-08/tarefas/T-018.md), [T-019](features/F-08/tarefas/T-019.md), [T-020](features/F-08/tarefas/T-020.md), [T-021](features/F-08/tarefas/T-021.md).
+- F-09: [T-022](features/F-09/tarefas/T-022.md), [T-023](features/F-09/tarefas/T-023.md), [T-024](features/F-09/tarefas/T-024.md).
+- F-11: [T-027](features/F-11/tarefas/T-027.md), [T-028](features/F-11/tarefas/T-028.md), [T-029](features/F-11/tarefas/T-029.md), [T-030](features/F-11/tarefas/T-030.md), [T-031](features/F-11/tarefas/T-031.md).
+
+## Feature técnica F-12 — início seguro de feature
+
+- [T-032](features/F-12/tarefas/T-032.md) — Definir a sequência obrigatória de sincronização e criação da branch.
+- [T-033](features/F-12/tarefas/T-033.md) — Criar comando que prepara main e abre branch nova com validações.

@@ -16,6 +16,7 @@ Derivado de `ESCOPO.md`. Este arquivo é o **índice**: cada feature tem `featur
 | F-08 | Ambiente local: executar e testar a aplicação completa com Docker Compose | 6 Plataforma técnica | P0 técnico |
 | F-09 | Apresentação do projeto: explicar a POC, a orquestração de agentes e o estado da implementação | Documentação do repositório | P0 técnico |
 | F-10 | Validação por feature: reunir evidências de testes, integração e aceite antes da conclusão | Qualidade do processo | P0 técnico |
+| [F-12](features/F-12/FEATURE.md) | Início seguro de feature: atualizar main e criar branch exclusiva antes de implementar | P0 técnico |
 
 ## Histórias
 
@@ -45,6 +46,7 @@ Derivado de `ESCOPO.md`. Este arquivo é o **índice**: cada feature tem `featur
 | [H-22](features/F-08/historias/H-22.md) | [F-08](features/F-08/FEATURE.md) | Executar a aplicação localmente com Docker |
 | [H-23](features/F-09/historias/H-23.md) | [F-09](features/F-09/FEATURE.md) | Apresentar a POC no README |
 | [H-25](features/F-11/historias/H-25.md) | [F-11](features/F-11/FEATURE.md) | Navegar pelo backlog em arquivos separados |
+| [H-26](features/F-12/historias/H-26.md) | [F-12](features/F-12/FEATURE.md) | Iniciar cada feature da main atualizada |
 
 ### H-24 — Validar a conclusão de cada feature
 
