@@ -12,7 +12,17 @@ Use este registro para simplificações conscientes, limitações técnicas e pr
 
 ## Itens
 
-Nenhuma dívida técnica registrada até agora; o projeto ainda contém apenas documentação e instruções.
+### DT-001 — Comando de início de feature falha sem `-Root`
+
+- Origem: F-12 / `scripts/start-feature.ps1`, identificado durante T-001 da F-01.
+- Estado: aberto
+- Prioridade: P1
+- Evidência e impacto: a chamada documentada sem `-Root` falhou no PowerShell ao avaliar `Split-Path -Parent $PSScriptRoot` na lista de parâmetros. O comando com `-Root .` criou a branch corretamente, mas o uso padrão documentado fica indisponível.
+- Motivo de não corrigir agora: T-001 restringe-se ao contrato de acesso da F-01; a correção pertence à F-12.
+- Responsável: infraestrutura local da F-12.
+- Prazo ou gatilho: corrigir antes da próxima feature iniciada pelo comando padrão.
+- Plano de correção: calcular a raiz padrão no corpo do script após o binding dos parâmetros e testar a invocação sem `-Root`.
+- Verificação de encerramento: teste isolado cria uma branch chamando o script sem `-Root` e o exemplo de `VERSIONAMENTO.md` funciona.
 
 <!-- Modelo para o próximo item:
 ### DT-001 — Título objetivo
