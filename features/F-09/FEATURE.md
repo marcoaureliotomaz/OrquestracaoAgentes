@@ -12,3 +12,7 @@
 - [T-022](tarefas/T-022.md)
 - [T-023](tarefas/T-023.md)
 - [T-024](tarefas/T-024.md)
+
+## Progresso
+
+- [Histórico de implementação](PROGRESSO.md)

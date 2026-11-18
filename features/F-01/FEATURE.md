@@ -27,3 +27,7 @@
 - [T-014](tarefas/T-014.md)
 - [T-015](tarefas/T-015.md)
 - [T-016](tarefas/T-016.md)
+
+## Progresso
+
+- [Histórico de implementação](PROGRESSO.md)

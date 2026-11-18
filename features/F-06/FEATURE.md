@@ -11,3 +11,7 @@
 ## Tarefas
 
 Ainda não refinadas.
+
+## Progresso
+
+- [Histórico de implementação](PROGRESSO.md)

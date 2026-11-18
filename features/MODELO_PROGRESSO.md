@@ -1,6 +1,6 @@
 # Progresso da feature F-xx
 
-Este arquivo é o histórico das execuções de implementação desta feature. Antes de começar, leia a última rodada. Ao terminar **cada prompt de implementação**, acrescente uma seção nova, inclusive se a execução terminar bloqueada ou sem tarefa concluída. Resuma o pedido sem copiar segredos ou dados pessoais. O estado oficial continua nos arquivos `tarefas/T-xxx.md`.
+Este arquivo é o histórico das execuções de implementação desta feature. Antes de começar, leia a última rodada. Ao terminar **cada prompt de implementação**, acrescente uma seção nova, inclusive se a execução terminar bloqueada ou sem tarefa concluída. Se o pedido afetar mais de uma feature, registre uma rodada em cada pasta envolvida. Resuma o pedido sem copiar segredos ou dados pessoais. O estado oficial continua nos arquivos `tarefas/T-xxx.md`; só marque uma história como concluída quando seus critérios de aceite forem verificados.
 
 ## Rodadas de implementação
 

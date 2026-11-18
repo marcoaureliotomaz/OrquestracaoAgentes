@@ -65,4 +65,4 @@ As versões exatas serão fixadas ao criar os módulos. Consulte [`PADROES_TECNI
 
 O repositório contém **escopo, backlog, tarefas, agentes e controles de qualidade**. O [`compose.yaml`](compose.yaml) já prepara PostgreSQL e Mailpit, conforme [`LOCAL_DOCKER.md`](LOCAL_DOCKER.md). A API Java e o frontend Angular ainda não foram implementados; portanto, o tracker completo ainda não pode ser executado. A implantação AWS fica para depois da validação local.
 
-Para iniciar a implementação, abra o índice [`TAREFAS.md`](TAREFAS.md), escolha uma tarefa pronta e confira seu arquivo, suas dependências e a branch da feature correspondente. O primeiro fluxo de produto planejado é o acesso por link de e-mail ([`H-01`](features/F-01/historias/H-01.md)).
+Para iniciar a implementação, abra o índice [`TAREFAS.md`](TAREFAS.md), escolha uma tarefa pronta e confira seu arquivo, suas dependências e a branch da feature correspondente. Leia o `PROGRESSO.md` da feature antes de começar e acrescente uma rodada ao terminar o prompt. O primeiro fluxo de produto planejado é o acesso por link de e-mail ([`H-01`](features/F-01/historias/H-01.md)).

@@ -25,6 +25,20 @@ foreach ($featureDirectory in Get-ChildItem -LiteralPath $featuresRoot -Director
         throw "Feature sem identificacao ou indice: $featureId"
     }
 
+    $progressPath = Join-Path $featureDirectory.FullName 'PROGRESSO.md'
+    if (-not (Test-Path -LiteralPath $progressPath)) { throw "Historico de progresso ausente: $featureId" }
+    $progressText = Get-Content -LiteralPath $progressPath -Raw -Encoding UTF8
+    if ($progressText -cnotmatch ('(?m)^# Progresso da feature ' + [regex]::Escape($featureId) + '\r?$') -or
+        -not $featureText.Contains('(PROGRESSO.md)')) {
+        throw "Historico de progresso sem vinculo valido: $featureId"
+    }
+    $rounds = [regex]::Matches($progressText, '(?m)^### R-(\d{3})\b')
+    for ($roundNumber = 1; $roundNumber -le $rounds.Count; $roundNumber++) {
+        if ($rounds[$roundNumber - 1].Groups[1].Value -cne $roundNumber.ToString('D3')) {
+            throw "Rodadas fora de ordem: $featureId"
+        }
+    }
+
     $storyDirectory = Join-Path $featureDirectory.FullName 'historias'
     if (-not (Test-Path -LiteralPath $storyDirectory)) { throw "Pasta de historias ausente: $featureId" }
     foreach ($storyFile in Get-ChildItem -LiteralPath $storyDirectory -File -Filter 'H-*.md') {
